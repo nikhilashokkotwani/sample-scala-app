@@ -6,4 +6,4 @@ logsBucket: 'gs://${PROJECT_ID}-dataproc-ereceipts-cloudbuild-logs/'
 artifacts:
       objects:
         location: 'gs://${PROJECT_ID}-dataproc-ereceipts-flink-code/'
-        paths: ['target/scala*/classes/*.jar']
+        paths: ['target/scala-2.13/classes/*.jar']
