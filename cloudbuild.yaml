@@ -1,0 +1,9 @@
+steps:
+- name: 'gcr.io/$PROJECT_ID/scala-sbt'
+  args: ['clean', 'update', 'compile' , 'package']
+  id: clean-update-compile
+logsBucket: 'gs://${PROJECT_ID}-dataproc-ereceipts-cloudbuild-logs/' 
+artifacts:
+      objects:
+        location: 'gs://${PROJECT_ID}-dataproc-ereceipts-flink-code/'
+        paths: ['target/scala*/classes/*.jar']
